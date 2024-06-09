@@ -1,7 +1,7 @@
 <template>
   <input min="0" type="number" @input="changeAmount($event.target.value)" placeholder="Введите число"><br>
   <button @click="convert()">Конвертировать</button>
-  <button @click="favorite()" className="fav-button">В избратное</button>
+  <button @click="favorite()" className="fav-button">В избраное</button>
 </template>
 
 <script>
