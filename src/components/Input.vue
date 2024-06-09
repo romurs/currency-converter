@@ -1,10 +1,20 @@
 <template>
-  <input type="number" placeholder="Введите число">
+  <input min="0" type="number" @input="changeAmount($event.target.value)" placeholder="Введите число"><br>
+  <button @click="convert()">Конвертировать</button>
 </template>
 
 <script>
 export default{
-
+  props:{
+    changeAmount:{
+      type: Function,
+      required: true
+    },
+    convert:{
+      type: Function,
+      required: true
+    }
+  }
 }
 </script>
 
@@ -20,5 +30,16 @@ input{
   padding: 10px 15px;
   background: #fafafa;
   color: #333;
+}
+button{
+  position: relative;
+  top: -20px;
+  padding: 15px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #1a032d;
+  border: 0;
+  border-radius: 3px
 }
 </style>
